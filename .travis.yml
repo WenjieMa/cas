@@ -77,7 +77,6 @@ jobs:
   - stage: initialize
     script: ./ci/tests/couchdb/run-tests-couchdb.sh
     name: "CouchDb User Tests"
-
     ############################################
   - stage: publish
     if: NOT commit_message =~ ^\[skip\s+snapshots\] and type != "pull_request" and (branch =~ /^\d+\.\d+\.x$/ or branch = master)
