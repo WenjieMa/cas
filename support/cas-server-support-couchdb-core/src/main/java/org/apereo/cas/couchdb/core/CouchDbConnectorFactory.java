@@ -103,6 +103,10 @@ public class CouchDbConnectorFactory {
             builder.password(couchDbProperties.getPassword());
         }
 
+        if (StringUtils.isNotBlank(couchDbProperties.getUsername())) {
+            builder.username(couchDbProperties.getUsername());
+        }
+
         val client = builder.build();
         LOGGER.debug("Client created: [{}]", client);
         return client;
