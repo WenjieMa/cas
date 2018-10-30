@@ -99,12 +99,12 @@ public class CouchDbConnectorFactory {
             }
         }
 
-        if (StringUtils.isNotBlank(couchDbProperties.getPassword())) {
-            builder.password(couchDbProperties.getPassword());
-        }
-
         if (StringUtils.isNotBlank(couchDbProperties.getUsername())) {
             builder.username(couchDbProperties.getUsername());
+        }
+
+        if (StringUtils.isNotBlank(couchDbProperties.getPassword())) {
+            builder.password(couchDbProperties.getPassword());
         }
 
         val client = builder.build();
